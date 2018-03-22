@@ -1,2 +1,1 @@
-# Kotlin-Standard-Library-Cookbook
-Kotlin Standard Library Cookbook, published by Packt
+# The code for this repository is under development :construction_worker:
