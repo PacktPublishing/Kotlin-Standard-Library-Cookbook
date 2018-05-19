@@ -15,9 +15,9 @@ fun main(vararg args: String) {
     upperCasePrinter.printText(text)
 }
 
-class Printer(val textProcessingStrategy: (String) -> String) {
+class Printer(val textFormattingStrategy: (String) -> String) {
     fun printText(text: String) {
-        val processedText = textProcessingStrategy(text)
+        val processedText = textFormattingStrategy(text)
         println(processedText)
     }
 }
