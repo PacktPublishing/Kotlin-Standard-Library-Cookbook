@@ -1,7 +1,8 @@
 package chapter_1
 
 /**
- * Applying sequences to solve algorithmic problems
+ * Chapter: Charm of ranges, progressions and sequences
+ * Recipe: Applying sequences to solve algorithmic problems
  */
 fun main(vararg args: String) {
     println(fibonacci().take(20).toList())

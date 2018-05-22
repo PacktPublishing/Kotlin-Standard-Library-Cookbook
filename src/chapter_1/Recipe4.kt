@@ -3,7 +3,8 @@ package chapter_1
 import java.util.*
 
 /**
- * Using range expressions with flow control statements
+ * Chapter: Charm of ranges, progressions and sequences
+ * Recipe: Using range expressions with flow control statements
  */
 fun main(vararg args: String) {
     val randomInt = Random().nextInt()

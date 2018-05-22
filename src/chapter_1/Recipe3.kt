@@ -3,7 +3,8 @@ package chapter_1
 import java.time.LocalDate
 
 /**
- * Building a custom progression to traverse dates
+ * Chapter: Charm of ranges, progressions and sequences
+ * Recipe: Building a custom progression to traverse dates
  */
 fun main(vararg args: String) {
     val startDate = LocalDate.of(2020, 1, 1)
