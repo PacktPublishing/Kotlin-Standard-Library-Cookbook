@@ -1,4 +1,4 @@
-package chapter_5
+package chapter5
 
 import java.time.Instant
 import java.util.*

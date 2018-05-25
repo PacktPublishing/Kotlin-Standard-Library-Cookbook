@@ -1,4 +1,4 @@
-package chapter_1
+package chapter1
 
 /**
  * Chapter: Charm of ranges, progressions and sequences
