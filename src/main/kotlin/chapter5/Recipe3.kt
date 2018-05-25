@@ -10,9 +10,11 @@ fun main(vararg args: String) {
 
 }
 
-data class Client(val name: String,
-                  val email: String,
-                  val creditCards: List<CreditCard>)
+data class Client(val data: Map<String, Any>) {
+    val name: String by data
+    val email: String by data
+    val creditCards: List<CreditCard> by data
+}
 
 data class CreditCard(val holderName: String,
                       val number: String,
