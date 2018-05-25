@@ -8,6 +8,7 @@
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -166,3 +167,9 @@ fastlane/readme.md
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.DS_Store
+.idea/vcs.xml
+samples/.DS_Store
+samples/src/main/java/
+samples/src/main/resources/
+samples/src/test/
