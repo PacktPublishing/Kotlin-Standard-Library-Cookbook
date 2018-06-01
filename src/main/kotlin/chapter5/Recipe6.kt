@@ -10,22 +10,29 @@ import kotlin.reflect.KProperty
 
 fun main(vararg args: String) {
     val initialTemperature = 1
+    val updatePrecondition: (Int, Int) -> Boolean =
+            { oldValue, newValue -> Math.abs(oldValue - newValue) >= 10}
 
-    var observableVetoableTemperature by object: ObservableProperty<Int>(initialTemperature) {
-        override fun beforeChange(property: KProperty<*>, oldValue: Int, newValue: Int): Boolean {
-            return Math.abs(oldValue - newValue) >= 10
-        }
+    val updateListener: (Int, Int) -> Unit = { _, newValue -> println(newValue) }
 
-        override fun afterChange(property: KProperty<*>, oldValue: Int, newValue: Int) {
-            println(newValue)
-        }
-    }
+    var temperature: Int by ObservableVetoableDelegate<Int>(initialTemperature, updatePrecondition, updateListener)
 
-    observableVetoableTemperature = 11
-    observableVetoableTemperature = 12
-    observableVetoableTemperature = 13
-    observableVetoableTemperature = 14
-    observableVetoableTemperature = 30
+    temperature = 11
+    temperature = 12
+    temperature = 13
+    temperature = 14
+    temperature = 30
 
+}
+
+class ObservableVetoableDelegate<T>(initialValue: T,
+                                    private val updatePrecondition: (oldValue: T, newValue: T) -> Boolean,
+                                    private val updateListener: (oldValue: T, newValue: T) -> Unit):
+        ObservableProperty<T>(initialValue = initialValue) {
+
+    override fun beforeChange(property: KProperty<*>, oldValue: T, newValue: T): Boolean =
+            updatePrecondition(oldValue, newValue)
+
+    override fun afterChange(property: KProperty<*>, oldValue: T, newValue: T) = updateListener(oldValue, newValue)
 }
 
