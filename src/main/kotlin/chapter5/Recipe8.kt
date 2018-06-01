@@ -10,16 +10,13 @@ import java.io.File
 fun main(vararg args: String) {
     val dialog =
             dialog {
-
-                message {
-                    text = "You have 23 viruses on your computer!"
-                    color = "#FF0000"
-                }
-
                 title {
                     "Warning!"
                 }
-
+                message {
+                    text = "You have 99999 viruses on your computer!"
+                    color = "#FF0000"
+                }
                 image {
                     File.createTempFile("red_alert", "png")
                 }
@@ -39,7 +36,7 @@ class Dialog {
 
     fun show() = println("Dialog...\n$this")
 
-    override fun toString(): String = "Title: $title \nImage: $image \nMessage: $message"
+    override fun toString() = "Title: $title \nImage: $image \nMessage: $message"
 }
 
 class DialogBuilder() {
@@ -80,6 +77,3 @@ class DialogBuilder() {
 }
 
 fun dialog(block: DialogBuilder.() -> Unit): Dialog = DialogBuilder(block).build()
-
-
-
