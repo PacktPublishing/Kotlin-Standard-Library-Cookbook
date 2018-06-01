@@ -10,7 +10,8 @@ import kotlin.reflect.KProperty
 
 fun main(vararg args: String) {
     val initialTemperature = 1
-    val updateCondition = { _: KProperty<*>, oldValue: Int, newValue: Int -> Math.abs(oldValue - newValue) >= 10 }
+    val updateCondition: (KProperty<*>, Int, Int) -> Boolean =
+            { _, oldValue: Int, newValue: Int -> Math.abs(oldValue - newValue) >= 10 }
     var temperature: Int by Delegates.vetoable(initialTemperature, updateCondition)
 
     temperature = 10

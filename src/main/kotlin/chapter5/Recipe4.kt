@@ -9,9 +9,10 @@ import kotlin.reflect.KProperty
  */
 
 fun main(vararg args: String) {
-    val initialTemperature = 1
-    val changesListener = { _: KProperty<*>, _: Int, newValue: Int -> println("Current temperature: $newValue") }
-    var temperature: Int by Delegates.observable(initialTemperature, changesListener)
+    val initialValue = 1
+    val changesListener: (KProperty<*>, Int, Int) -> Unit =
+            { _, _: Int, newValue: Int -> println("Current temperature: $newValue") }
+    var temperature: Int by Delegates.observable(initialValue, changesListener)
 
     temperature = 10
     temperature = 11
