@@ -1,5 +1,20 @@
 package chapter6
 
+import java.io.File
+import java.io.File.separator as SEPARATOR
+
+/**
+ * Chapter: Friendly I/O operations
+ * Recipe: Reading the content of a file
+ */
 fun main(vararg args: String) {
-    println("Hello World")
+
+    val fileName = "src${SEPARATOR}main${SEPARATOR}resources${SEPARATOR}hello_world.txt"
+
+    val file = File(fileName)
+
+    val fileText: String = file.readText()
+
+    println(fileText)
+
 }
