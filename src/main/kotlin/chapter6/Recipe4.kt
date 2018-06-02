@@ -16,11 +16,7 @@ fun main(vararg args: String) {
     if (file.exists()) file.delete()
 
     file.apply {
-        appendText("Yo") // autocloses any streams which are opened during write operation
-        appendText("\n")
-        appendText("Yo")
-        appendText("\n")
-        appendBytes("Yo!".toByteArray())
+        writeText("Yo") // autocloses any streams which are opened during write operation
     }
 
 }
