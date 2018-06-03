@@ -9,9 +9,9 @@ import java.io.File.separator as SEPARATOR
  */
 fun main(vararg args: String) {
 
-    val fileName = "src${SEPARATOR}main${SEPARATOR}resources${SEPARATOR}file1.txt"
+    val filePahtName = "src${SEPARATOR}main${SEPARATOR}resources${SEPARATOR}file1.txt"
 
-    val file = File(fileName)
+    val file = File(filePahtName)
 
     val fileText: String = file.readText()
 
