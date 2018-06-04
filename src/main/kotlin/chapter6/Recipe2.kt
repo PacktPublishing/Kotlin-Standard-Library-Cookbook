@@ -9,7 +9,7 @@ import java.io.File.separator as SEPARATOR
  */
 fun main(vararg args: String) {
 
-    val fileName = "src${SEPARATOR}main${SEPARATOR}resources${SEPARATOR}hello_world.txt"
+    val fileName = "src${SEPARATOR}main${SEPARATOR}resources${SEPARATOR}file1.txt"
 
     val stream1 = File(fileName).inputStream()
 
