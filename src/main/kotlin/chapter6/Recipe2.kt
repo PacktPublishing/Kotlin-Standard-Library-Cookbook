@@ -19,6 +19,8 @@ fun main(vararg args: String) {
         it.readBytes().also { println(String(it)) }
     }
 
+// Accessing the `stream2` will cause "java.io.IOException: Stream Closed" exception.
+// The `FileInputStream` was closed internally by the `use()` function.
 //    stream1.readBytes()
 //    stream2.readBytes()
 
