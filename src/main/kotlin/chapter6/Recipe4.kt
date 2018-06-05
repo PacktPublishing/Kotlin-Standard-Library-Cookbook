@@ -13,10 +13,14 @@ fun main(vararg args: String) {
 
     val file = File(fileName)
 
-    if (file.exists()) file.delete()
-
     file.apply {
-        writeText("Yo") // autocloses any streams which are opened during write operation
+        val text =
+                "\"No one in the brief history of computing " +
+                        "has ever written a piece of perfect software. " +
+                        "It's unlikely that you'll be the first.\" - Andy Hunt"
+        writeText(text)
     }
+
+    file.readText().apply { println(this) }
 
 }
