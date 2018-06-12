@@ -16,11 +16,13 @@ fun main(vararg args: String) {
     if (file.exists()) file.delete()
 
     file.apply {
-        appendText("Yo") // autocloses any streams which are opened during write operation
+        appendText("\"A language that doesn’t affect the way you think ")
+        appendText("about programming ")
+        appendText("is worth knowing.\"")
         appendText("\n")
-        appendText("Yo")
-        appendText("\n")
-        appendBytes("Yo!".toByteArray())
+        appendBytes("Alan Perlis".toByteArray())
     }
+
+    file.readText().let { println(it) }
 
 }
