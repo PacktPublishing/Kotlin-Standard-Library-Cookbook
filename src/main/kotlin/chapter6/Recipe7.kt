@@ -11,10 +11,16 @@ fun main(vararg args: String) {
 
     val directoryPath = "src${SEPARATOR}main${SEPARATOR}resources"
 
-    val fileTreeWalk: FileTreeWalk = File(directoryPath).walkTopDown()
+    val fileTreeWalk: FileTreeWalk = File(directoryPath).walk()
     fileTreeWalk
             .filter { it.isFile }
             .filter { it.extension == "txt" }
             .filter { it.readBytes().isNotEmpty() }
-            .forEach { it.readText().apply { println(this) } }
+            .forEach {
+                it.apply {
+                    println(path)
+                    println(readText())
+                    println()
+                }
+            }
 }
