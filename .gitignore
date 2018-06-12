@@ -145,5 +145,7 @@ samples/src/main/resources/
 samples/src/test/
 
 /src/main/resources/temp_file
-/src/main/resources/hello_world_copy.txt
+/src/main/resources/file2_copy.txt
 src/main/kotlin/Playground.kt
+src/main/java/
+src/test/
