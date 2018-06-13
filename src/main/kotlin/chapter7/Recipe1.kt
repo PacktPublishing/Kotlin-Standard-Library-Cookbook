@@ -30,4 +30,4 @@ private fun `2 sec long task`() {
     Thread.sleep(2000)
 }
 
-fun getCurrentThreadName(): String = Thread.currentThread().name
+private fun getCurrentThreadName(): String = Thread.currentThread().name
