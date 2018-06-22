@@ -1,5 +1,6 @@
 package chapter7
 
+import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.runBlocking
 import kotlin.concurrent.thread
 import kotlin.coroutines.experimental.Continuation
@@ -12,10 +13,17 @@ import kotlin.system.measureTimeMillis
  */
 fun main(vararg args: String) = runBlocking {
     val time = measureTimeMillis {
-        getResults().map {
-            println(it)
+        val asyncResults = async {
+            getResults()
         }
+
+        println("getResults() is running in bacground. Main thread is not blocked.")
+
+        asyncResults.await().map { println(it) }
+
+        println("getResults() completed")
     }
+
     println("Total time elapsed: $time ms")
 }
 
