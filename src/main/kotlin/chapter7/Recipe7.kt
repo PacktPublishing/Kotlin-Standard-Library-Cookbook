@@ -21,8 +21,14 @@ fun main(vararg args: String) = runBlocking {
             .build()
             .create(GithubApi::class.java)
 
-    api.searchRepositories("Kotlin").await().list.map { println(it) }
-    Unit
+    val downloadedRepos = api.searchRepositories("Kotlin").await().list
+    downloadedRepos
+            .sortedByDescending { it.stars }
+            .forEach {
+                it.apply {
+                    println("$fullName ⭐$stars\n$description\n$url\n")
+                }
+            }
 }
 
 interface GithubApi {
