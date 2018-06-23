@@ -21,7 +21,7 @@ fun main(vararg args: String) {
         println("Ending async operation on ${getCurrentThreadName()}")
     }.join()
 
-    println("Just a simple check if ${getCurrentThreadName()} is free")
+    println("${getCurrentThreadName()} thread is free now")
 
 }
 
