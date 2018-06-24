@@ -11,7 +11,7 @@ import kotlin.system.measureTimeMillis
  */
 fun main(vararg args: String) = runBlocking {
     val totalTime = measureTimeMillis {
-        (0..10).mapAsync {
+        (0..10).mapConcurrent {
             delay(1000)
             it * it
         }.map { println(it) }
@@ -20,7 +20,7 @@ fun main(vararg args: String) = runBlocking {
     println("Total time: $totalTime ms")
 }
 
-suspend fun <T, R> Iterable<T>.mapAsync(transform: suspend (T) -> R) =
+suspend fun <T, R> Iterable<T>.mapConcurrent(transform: suspend (T) -> R) =
     this.map {
         async { transform(it) }
     }.map {
