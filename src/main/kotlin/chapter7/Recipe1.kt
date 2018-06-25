@@ -22,12 +22,8 @@ fun main(vararg args: String) {
     }
 }
 
-private fun `5 sec long task`() {
-    Thread.sleep(5000)
-}
+private fun `5 sec long task`() = Thread.sleep(5000)
 
-private fun `2 sec long task`() {
-    Thread.sleep(2000)
-}
+private fun `2 sec long task`() = Thread.sleep(2000)
 
 private fun getCurrentThreadName(): String = Thread.currentThread().name
