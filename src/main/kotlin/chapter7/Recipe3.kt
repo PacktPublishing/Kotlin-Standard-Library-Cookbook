@@ -26,7 +26,7 @@ fun main(vararg args: String) {
 
             `prepare fish`()
 
-            `cut vegetables`()
+            `cut vegetable`()
 
             riceCookingJob.join()
 
@@ -53,7 +53,7 @@ private suspend fun `prepare fish`() {
     println("Fish prepared")
 }
 
-private suspend fun `cut vegetables`() {
+private suspend fun `cut vegetable`() {
     println("Starting to cut vegetables")
     delay(2, TimeUnit.SECONDS)
     println("Vegetables ready")
