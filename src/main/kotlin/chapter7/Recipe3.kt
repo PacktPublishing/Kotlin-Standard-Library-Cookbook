@@ -16,7 +16,7 @@ fun main(vararg args: String) {
 
     val time = measureTimeMillis {
 
-        sushiCookingJob = launch(CommonPool) {
+        sushiCookingJob = launch {
 
             val riceCookingJob = launch {
                 `cook rice`()

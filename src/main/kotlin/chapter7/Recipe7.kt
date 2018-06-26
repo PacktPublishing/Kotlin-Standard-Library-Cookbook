@@ -34,13 +34,14 @@ fun main(vararg args: String) = runBlocking {
 interface GithubApi {
     // Api docs:
     // https://developer.github.com/v3/search/#search-repositories
-    // example call https://api.github.com/search/repositories?q=iosched
+    // example call https://api.github.com/search/repositories?q=parrot.live
     @GET("/search/repositories")
-    fun searchRepositories(@Query("q") searchQuery: String): Deferred<SearchRepositoriesResponse>
+    fun searchRepositories(@Query("q") searchQuery: String): Deferred<Response>
 
 }
 
-data class SearchRepositoriesResponse(@SerializedName("items") val list: Collection<Repository>)
+data class Response(@SerializedName("items")
+                                      val list: Collection<Repository>)
 data class Repository(val id: Long?,
                       val name: String?,
                       val description: String?,
