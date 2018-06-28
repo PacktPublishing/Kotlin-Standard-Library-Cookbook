@@ -1,7 +1,9 @@
 package chapter7
 
-import kotlinx.coroutines.experimental.*
-import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.experimental.Job
+import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.experimental.newSingleThreadContext
+import kotlinx.coroutines.experimental.runBlocking
 import kotlin.system.measureTimeMillis
 
 /**
@@ -15,8 +17,8 @@ fun main(vararg args: String) {
     var sushiCookingJob: Job
 
     val time = measureTimeMillis {
-
-        sushiCookingJob = launch {
+        sushiCookingJob = launch(newSingleThreadContext("SushiThread")) {
+            `print current thread name`()
 
             val riceCookingJob = launch {
                 `cook rice`()
@@ -41,33 +43,32 @@ fun main(vararg args: String) {
     println("Total time: $time ms")
 }
 
-private suspend fun `cook rice`() {
-    println("Starting to cook rice")
-    delay(10, TimeUnit.SECONDS)
+private fun `cook rice`() {
+    println("Starting to cook rice on ${getCurrentThreadName()}")
+    Thread.sleep(10000)
     println("Rice cooked")
 }
 
-private suspend fun `prepare fish`() {
-    println("Starting to prepare fish")
-    delay(2, TimeUnit.SECONDS)
+private fun `prepare fish`() {
+    println("Starting to prepare fish on ${getCurrentThreadName()}")
+    Thread.sleep(2000)
     println("Fish prepared")
 }
 
-private suspend fun `cut vegetable`() {
-    println("Starting to cut vegetables")
-    delay(2, TimeUnit.SECONDS)
+private fun `cut vegetable`() {
+    println("Starting to cut vegetables on ${getCurrentThreadName()}")
+    Thread.sleep(2000)
     println("Vegetables ready")
 }
 
-private suspend fun `roll the sushi`() {
-    println("Starting to roll the sushi")
-    delay(2, TimeUnit.SECONDS)
+private fun `roll the sushi`() {
+    println("Starting to roll the sushi on ${getCurrentThreadName()}")
+    Thread.sleep(2000)
     println("Sushi rolled")
 }
 
 private fun `print current thread name`() {
     println("Running on ${getCurrentThreadName()}")
-    println()
 }
 
 private fun getCurrentThreadName(): String = Thread.currentThread().name
