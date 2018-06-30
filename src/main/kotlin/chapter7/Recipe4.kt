@@ -10,24 +10,25 @@ import kotlinx.coroutines.experimental.runBlocking
  * Recipe: Using coroutines to execute asynchronous tasks and with results handling
  */
 fun main(vararg args: String) {
+
     `print current thread name`()
 
-    val answerPromise = async {
-        `print current thread name`()
-        `calculate the answer to life the universe and everything`()
-    }
-
     launch {
-        `print current thread name`()
+        println("Starting progressbar animation on ${getCurrentThreadName()}")
         `show progress animation`()
     }
 
-    println("Main thread is not blocked while background tasks are in progress")
-
-    runBlocking {
-        println("\nThe answer to life the universe and everything: ${answerPromise.await()}")
+    val future = async {
+        println("Starting computations on ${getCurrentThreadName()}")
+        `calculate the answer to life the universe and everything`()
     }
 
+    println("${getCurrentThreadName()} thread is not blocked while tasks are in progress")
+
+    runBlocking {
+        println("\nThe answer to life the universe and everything: ${future.await()}")
+        `print current thread name`()
+    }
 }
 
 private suspend fun `calculate the answer to life the universe and everything`(): Int {
