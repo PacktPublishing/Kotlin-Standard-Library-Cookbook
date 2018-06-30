@@ -13,6 +13,8 @@ fun main(vararg args: String) = runBlocking {
     val totalTime = measureTimeMillis {
         (0..10).mapConcurrent {
             delay(1000)
+// In order to block the current thread replace the delay(1000) call above with the line below.
+//            Thread.sleep(1000)
             it * it
         }.map { println(it) }
     }
