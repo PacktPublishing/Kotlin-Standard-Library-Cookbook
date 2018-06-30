@@ -1,6 +1,5 @@
 package chapter7
 
-import kotlinx.coroutines.experimental.NonCancellable.isActive
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
 import kotlinx.coroutines.experimental.runBlocking
@@ -10,16 +9,17 @@ import kotlinx.coroutines.experimental.runBlocking
  * Recipe: Easy coroutine cancelling
  */
 fun main(vararg args: String) = runBlocking {
-    val job = launch { `show progress animation`() }
+    val job = launch {`show progress animation`()}
     delay(5000)
     job.cancel()
-    Unit
+    job.join()
+    println("\nJob cancelled and completed")
 }
 
 private suspend fun `show progress animation`() {
     val progressBarLength = 30
     var currentPosition = 0
-    while (isActive) {
+    while (true) {
         print("\r")
         val progressbar = (0 until progressBarLength)
                 .map { if (it == currentPosition) " " else "░" }
