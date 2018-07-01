@@ -5,10 +5,10 @@ import org.junit.Test
 
 /**
  * Chapter: Unit tests with JUnit and Kotlin Mockito
- * Recipe: The basics of writing unit tests cases
+ * Recipe: Working with Kotlin test assertions
  */
 
-class Recipe1 {
+class Recipe6 {
 
     @Test
     fun `sample test`() {
