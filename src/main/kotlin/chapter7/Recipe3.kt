@@ -8,7 +8,7 @@ import kotlin.system.measureTimeMillis
 
 /**
  * Chapter: Making Asynchronous programming great again
- * Recipe: Using coroutines to execute asynchronous concurrent tasks
+ * Recipe: Using coroutines for asynchronous concurrent tasks execution
  */
 fun main(vararg args: String) {
 
