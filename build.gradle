@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:1.0.0'
 
     // JUnit
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'junit', name: 'junit', version: '4.12'
 }
 
 compileKotlin {
