@@ -19,7 +19,7 @@ fun main(vararg args: String) = runBlocking {
 
         println("getResults() is running in bacground. Main thread is not blocked.")
 
-        asyncResults.await().map { println(it) }
+        asyncResults.await().map { println(it.displayName) }
 
         println("getResults() completed")
     }
