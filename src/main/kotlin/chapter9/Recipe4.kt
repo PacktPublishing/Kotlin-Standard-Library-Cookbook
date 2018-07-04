@@ -1,18 +1,27 @@
 package chapter9
 
-import org.junit.Assert.assertTrue
+import kotlinx.coroutines.experimental.runBlocking
+import kotlinx.coroutines.experimental.test.TestCoroutineContext
+import kotlinx.coroutines.experimental.withContext
 import org.junit.Test
+import java.util.concurrent.TimeUnit
 
 /**
- * Chapter: Unit tests with JUnit and Kotlin Mockito
- * Recipe: Mocking complex classes
+ * Chapter: Best practices for Android, JUnit and JVM UI frameworks
+ * Recipe: Unit tests for Kotlin coroutines
  */
-
 
 class Recipe4 {
 
     @Test
     fun `sample test`() {
-        assertTrue(2 + 2 == 4)
+
+        runBlocking {
+            val context = TestCoroutineContext()
+            withContext(context) {
+                context.advanceTimeBy(1, TimeUnit.SECONDS)
+            }
+        }
+
     }
 }
