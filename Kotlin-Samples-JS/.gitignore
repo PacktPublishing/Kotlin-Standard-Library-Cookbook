@@ -6,4 +6,4 @@ build/
 src/.DS_Store
 src/main/.DS_Store
 web/js/app.meta.js
-web/js/lib/kotlin.meta.js
+web/js/lib/
