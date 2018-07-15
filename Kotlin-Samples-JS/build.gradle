@@ -21,10 +21,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }
 
-compileKotlin2Js.kotlinOptions.sourceMap = true
 compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
-compileKotlin2Js.kotlinOptions.suppressWarnings = true
-compileKotlin2Js.kotlinOptions.verbose = true
 
 build.doLast {
     configurations.compile.each { File file ->

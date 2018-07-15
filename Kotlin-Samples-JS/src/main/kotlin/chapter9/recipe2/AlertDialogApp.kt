@@ -1,5 +1,3 @@
-package chapter9
-
 /**
  * Chapter: Miscellaneous
  * Recipe: Kotlin and JavaScript interoperability issues
