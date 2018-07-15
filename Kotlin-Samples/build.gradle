@@ -9,10 +9,6 @@ buildscript {
     }
 }
 
-plugins {
-    id 'java'
-}
-
 group 'samuel.urbanowicz'
 version '1.0'
 
