@@ -11,7 +11,7 @@ fun main(args : Array<String>) {
 
 fun showAlert() {
     val number: dynamic = js("Math.floor(Math.random() * 1000)")
-    val message = "$number viruses found on your computer!"
+    val message = "There were $number viruses found on your computer! \uD83D\uDE31"
     println("showing alert")
     alert(message)
 }
