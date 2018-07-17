@@ -7,7 +7,7 @@ import java.util.*
  * Recipe: Using range expressions with flow control statements
  */
 fun main(vararg args: String) {
-    val randomInt = Random().nextInt()
+    val randomInt = Random(20).nextInt()
 
     if (randomInt in 0..10) {
         print("$randomInt belongs to <0, 10> range")
