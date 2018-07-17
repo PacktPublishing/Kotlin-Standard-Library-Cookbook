@@ -15,7 +15,7 @@ fun main(vararg args: String) {
     }
 }
 
-class DateIterator(val startDate: LocalDate,
+class DateIterator(startDate: LocalDate,
                    val endDateInclusive: LocalDate,
                    val stepDays: Long) : Iterator<LocalDate> {
     private var currentDate = startDate
