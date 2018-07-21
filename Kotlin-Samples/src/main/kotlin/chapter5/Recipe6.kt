@@ -5,7 +5,7 @@ import kotlin.reflect.KProperty
 
 /**
  * Chapter: Tasteful design patterns adopting Kotlin concepts
- * Recipe: Implementing advanced observer using custom property delegate
+ * Recipe: Implementing the advanced Observer pattern by defining a custom property delegate
  */
 
 fun main(vararg args: String) {
