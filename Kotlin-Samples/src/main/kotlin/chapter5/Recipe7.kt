@@ -7,12 +7,12 @@ package chapter5
 
 fun main(vararg args: String) {
 
-    val coffeMaker: CoffeeMaker by lazy { CoffeeMaker() }
+    val coffeeMaker: CoffeeMaker by lazy { CoffeeMaker() }
 
     println("Is the CoffeMaker created already?")
 
-    coffeMaker.makeEspresso()
-    coffeMaker.makeAmericano()
+    coffeeMaker.makeEspresso()
+    coffeeMaker.makeAmericano()
 }
 
 class CoffeeMaker {
