@@ -10,6 +10,8 @@ import chapter4.Recipe8.getStartTime
  */
 fun main(vararg args: String) {
     println(album.getStartTime(Track("10/10", 176)))
+    println(album.getStartTime(Track("Growing Up Beside You", 191)))
+    println(album.getStartTime(Track("Coming Up Easy", 292)))
 }
 
 object Recipe8 {
