@@ -12,10 +12,10 @@ fun List<String>.join(): String {
 }
 
 @JvmName("joinIntList")
-fun List<Int>.join(): String =
-    map { it.toString() }
-            .joinToString()
-
+fun List<Int>.join(): Int =
+    fold(0) { acc, value ->
+        acc + value
+    }
 
 fun main(vararg args: String) {
     println(listOf(1, 2, 3).join())
