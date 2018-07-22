@@ -4,13 +4,11 @@ import com.nhaarman.mockito_kotlin.doReturn
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.whenever
-import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentMatchers
 import org.mockito.ArgumentMatchers.anyString
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
-import kotlin.test.assertFalse
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 
@@ -22,20 +20,15 @@ import kotlin.test.assertTrue
 class Recipe8 {
     private val api = mock<RegistrationApi>()
     private val view = mock<TextView>()
-    private lateinit var registrationForm: RegistrationForm
-
-    @Before
-    fun setup() {
-        registrationForm = RegistrationForm(api, view)
-    }
+    private var registrationForm = RegistrationForm(api, view)
 
     @Test
     fun `should display success message when email address is available`() {
         // given
         assertNotNull(registrationForm)
-        // when
+        // when we update the currentEmailAddress to any String
         whenever(api.isEmailAddressAvailable(ArgumentMatchers.anyString())) doReturn(true)
-        registrationForm.currentEmailAddress = "HilaryClinton@gmail.com"
+        registrationForm.currentEmailAddress = "hilary@gmail.com"
         // then
         assertTrue(registrationForm.checkIfEmailCanBeRegistered())
         verify(view).showSuccessMessage("Email address is available!")
@@ -46,10 +39,10 @@ class Recipe8 {
         // given
         assertNotNull(registrationForm)
         // when
-        registrationForm.currentEmailAddress = "HilaryClinton@gmail.com"
+        registrationForm.currentEmailAddress = "hilary@gmail.com"
         whenever(api.isEmailAddressAvailable(ArgumentMatchers.anyString())) doReturn(false)
         // then
-        assertFalse(registrationForm.checkIfEmailCanBeRegistered())
+        assertTrue(registrationForm.isEmailIsValid())
         verify(view).showErrorMessage(anyString())
     }
 
