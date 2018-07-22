@@ -41,7 +41,7 @@ class Authenticator(val api: Api) {
                 var authToken = api.authorise(encodedUserNameAndPassword)
 
                 var retryCount = 0
-                while (authToken.isEmpty() && retryCount <= 10) {
+                while (authToken.isEmpty() && retryCount <= 8) {
                     delay(10, TimeUnit.SECONDS)
                     authToken = api.authorise(encodedUserNameAndPassword)
                     retryCount++

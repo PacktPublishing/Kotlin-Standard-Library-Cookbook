@@ -25,7 +25,6 @@ class MainActivity: AppCompatActivity() {
         text_field.text = "Bonjour!"
 
         val job = launch {
-            delay(2000)
             var counter = 1
             while (true) {
                 delay(1000)
