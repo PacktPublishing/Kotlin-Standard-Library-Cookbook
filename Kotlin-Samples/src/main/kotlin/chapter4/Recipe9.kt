@@ -22,8 +22,7 @@ object Recipe9 {
                         student.courses.map { course -> course to student }
                     }
                     .groupBy { (course, _) -> course }
-                    .map { (course, courseStudentPairs: List<Pair<Course, Student>>) ->
-                        course to courseStudentPairs.map { it -> it.second }
+                    .mapValues { (course, courseStudentPairs: List<Pair<Course, Student>>) ->
+                        courseStudentPairs.map { it -> it.second }
                     }
-                    .toMap()
 }

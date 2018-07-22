@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
 class SharedPreferencesTest {
 
     @Test
-    fun testUserParcelization() {
+    fun testSharedPrefs() {
         // given
         val sharedPrefs = getDefaultSharedPreferences()
         val userName: String = "Gonzo"
