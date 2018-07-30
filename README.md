@@ -41,12 +41,7 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
-| 2 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
-| 3 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
-| 4 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
-| 5 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
-| 7 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
+| 1 - 7 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
 | 8 | JetBrains IntelliJ Idea + Google Android Studio | Windows, Mac OS X, and Linux (Any) |
 | 9 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
 
