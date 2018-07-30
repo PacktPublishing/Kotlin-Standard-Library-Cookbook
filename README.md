@@ -54,8 +54,5 @@ With the following software and hardware list you can run all code files present
 **Samuel Urbanowicz**
 is an experienced software engineer skilled in mobile applications and backend development. A fan of modern programming languages, he has been using Kotlin since its beginning. He's always curious to dive into technologies. He is especially passionate about machine learning. Samuel believes that the Kotlin language has great potential for multiplatform development. He has work experience in both big corps and small start-ups. He is an active contributor to open source projects.
 
-## Other books by the authors
-[](https://www.packtpub.com/application-development/kotlin-programming-example-video?utm_source=github&utm_medium=repository&utm_campaign=)
-
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
