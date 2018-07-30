@@ -57,3 +57,5 @@ is an experienced software engineer skilled in mobile applications and backend d
 ## Other books by the authors
 [](https://www.packtpub.com/application-development/kotlin-programming-example-video?utm_source=github&utm_medium=repository&utm_campaign=)
 
+### Suggestions and Feedback
+[Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
