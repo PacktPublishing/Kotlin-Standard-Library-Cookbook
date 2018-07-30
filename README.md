@@ -35,7 +35,7 @@ for(day in daysOfYear.reversed()) {
 ```
 
 **Following is what you need for this book:**
-This book is for software developers who are familiar with Kotlin’s basics and want to discover more advanced features and concepts, especially those provided by the Kotlin standard library. It’s also ideal for experienced software developers who are familiar with the functional programming paradigm and other programming languages who want to switch to Kotlin. It will also help Java developers switch to Kotlin and integrate it into existing Java Virtual Machine (JVM) projects.
+This book is for software developers who are familiar with Kotlinâ€™s basics and want to discover more advanced features and concepts, especially those provided by the Kotlin standard library. Itâ€™s also ideal for experienced software developers who are familiar with the functional programming paradigm and other programming languages who want to switch to Kotlin. It will also help Java developers switch to Kotlin and integrate it into existing Java Virtual Machine (JVM) projects.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
 ### Software and Hardware List
@@ -48,43 +48,17 @@ With the following software and hardware list you can run all code files present
 | 5 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
 | 7 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
 | 8 | JetBrains IntelliJ Idea + Google Android Studio | Windows, Mac OS X, and Linux (Any) |
-|  |  | Windows, Mac OS X, and Linux (Any) |
-
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it]().
+| 9 | JetBrains IntelliJ Idea | Windows, Mac OS X, and Linux (Any) |
 
 ### Related products
 * Hands-on Design Patterns with Kotlin [[Packt]](https://www.packtpub.com/application-development/hands-design-patterns-kotlin?utm_source=github&utm_medium=repository&utm_campaign=9781788998017 ) [[Amazon]](https://www.amazon.com/dp/1788998014)
 
 * Kotlin Programming By Example [[Packt]](https://www.packtpub.com/application-development/kotlin-programming-example?utm_source=github&utm_medium=repository&utm_campaign=9781788474542 ) [[Amazon]](https://www.amazon.com/dp/1788474546)
 
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
 ## Get to Know the Author
 **Samuel Urbanowicz**
-Samuel Urbanowicz is an experienced software engineer skilled in mobile applications and backend development. A fan of modern programming languages, he has been using Kotlin since its beginning. He's always curious to dive into technologies. He is especially passionate about machine learning. Samuel believes that the Kotlin language has great potential for multiplatform development. He has work experience in both big corps and small start-ups. He is an active contributor to open source projects.
-
-****
-0
-
-****
-0
-
-****
-0
-
-****
-0
+is an experienced software engineer skilled in mobile applications and backend development. A fan of modern programming languages, he has been using Kotlin since its beginning. He's always curious to dive into technologies. He is especially passionate about machine learning. Samuel believes that the Kotlin language has great potential for multiplatform development. He has work experience in both big corps and small start-ups. He is an active contributor to open source projects.
 
 ## Other books by the authors
 [](https://www.packtpub.com/application-development/kotlin-programming-example-video?utm_source=github&utm_medium=repository&utm_campaign=)
-
-[]()
-
-[]()
-
-[]()
-
-[]()
 
