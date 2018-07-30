@@ -4,7 +4,7 @@
 
 This is the code repository for [Kotlin Standard Library Cookbook](https://www.packtpub.com/application-development/kotlin-standard-library-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788837668 ), published by Packt.
 
-**Build optimized applications in Kotlin by learning how to smartly implement standard libraries **
+**Build optimized applications in Kotlin by learning how to smartly implement standard libraries**
 
 ## What is this book about?
 Given the verbosity of Java, developers have turned to Kotlin for effective software development. Apart from being a modern programming language, the Kotlin standard library provides vital tools that make day-to-day Kotlin programming easier. This library features the core attributes of the language such as algorithmic problems, design patterns, data processing, and working with files and data streams.
