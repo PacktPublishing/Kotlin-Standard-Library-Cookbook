@@ -1,6 +1,6 @@
 # Kotlin Standard Library Cookbook
 
-<a href="https://www.packtpub.com/application-development/kotlin-standard-library-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788837668 "><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B09896_MockupCover_0.png" alt="Kotlin Standard Library Cookbook" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/application-development/kotlin-standard-library-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788837668 "><img src="https://www.packtpub.com/sites/default/files/B09896.png" alt="Kotlin Standard Library Cookbook" height="256px" align="right"></a>
 
 This is the code repository for [Kotlin Standard Library Cookbook](https://www.packtpub.com/application-development/kotlin-standard-library-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788837668 ), published by Packt.
 
