@@ -1,3 +1,7 @@
+## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B09896?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
+-----
+For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
+
 # Kotlin Standard Library Cookbook
 
 <a href="https://www.packtpub.com/application-development/kotlin-standard-library-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788837668 "><img src="https://www.packtpub.com/sites/default/files/B09896.png" alt="Kotlin Standard Library Cookbook" height="256px" align="right"></a>
